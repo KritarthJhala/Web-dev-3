@@ -1,9 +1,3 @@
-// fileManager.js
-// Demonstrates CRUD (Create, Read, Update, Delete) file operations
-// using Node's core fs module.
-//
-// Run: node fileManager.js
-
 const fs = require("fs");
 const logger = require("./modules/logger");
 
@@ -33,7 +27,7 @@ function readFile() {
   });
 }
 
-// 3. UPDATE FILE (append content)
+// 3. UPDATE FILE 
 function updateFile() {
   fs.appendFile(filePath, "\nLearning FS Module", (err) => {
     if (err) {
@@ -55,7 +49,6 @@ function updateFile() {
 function deleteFile() {
   fs.unlink(filePath, (err) => {
     if (err) {
-      // Handle missing file gracefully
       if (err.code === "ENOENT") {
         return logger.error("File does not exist, nothing to delete.");
       }
@@ -65,5 +58,4 @@ function deleteFile() {
   });
 }
 
-// Kick off the CRUD sequence
 createFile();

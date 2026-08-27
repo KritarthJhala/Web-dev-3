@@ -1,14 +1,3 @@
-// server.js
-// A basic HTTP server built with Node's core http module.
-// Demonstrates routing without any external framework (no Express).
-//
-// Run: node server.js
-// Then visit:
-//   http://localhost:3000/
-//   http://localhost:3000/about
-//   http://localhost:3000/contact
-//   http://localhost:3000/anything-else  -> 404
-
 const http = require("http");
 const logger = require("./modules/logger");
 

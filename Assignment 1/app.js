@@ -1,6 +1,3 @@
-// app.js
-// Demonstrates reusing custom modules: isEven and logger
-
 const isEven = require("./modules/isEven");
 const logger = require("./modules/logger");
 
@@ -14,5 +11,3 @@ numbersToCheck.forEach((num) => {
 });
 
 logger.info("Demo finished.");
-
-// Run with: node app.js

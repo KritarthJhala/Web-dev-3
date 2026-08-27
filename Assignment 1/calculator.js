@@ -1,18 +1,4 @@
-// calculator.js
-// A simple CLI-based calculator using process.argv
-//
-// Usage:
-//   node calculator.js add 10 5
-//   node calculator.js sub 10 5
-//   node calculator.js mul 10 5
-//   node calculator.js div 10 5
-
 const logger = require("./modules/logger");
-
-// process.argv[0] -> node executable path
-// process.argv[1] -> path to this script
-// process.argv[2] -> operation
-// process.argv[3], process.argv[4] -> operands
 const args = process.argv.slice(2);
 const [operation, a, b] = args;
 
@@ -37,7 +23,6 @@ function calculate(op, x, y) {
   }
 }
 
-// Validate inputs
 if (!operation || isNaN(num1) || isNaN(num2)) {
   logger.error("Invalid input. Usage: node calculator.js <add|sub|mul|div> <num1> <num2>");
   process.exit(1);
